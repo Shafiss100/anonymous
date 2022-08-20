@@ -25,7 +25,7 @@ async function run() {
 
     app.get("/alltext", async (req, res) => {
       const result = await textCollection.find({}).toArray();
-      if (result.length >10) {
+      if (result.length >14) {
         const text = result[0].text
         const delet= await textCollection.deleteOne({text:text})
       }
