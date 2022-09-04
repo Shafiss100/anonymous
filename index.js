@@ -23,6 +23,8 @@ async function run() {
     await client.connect();
     const textCollection = client.db("textCollection").collection("alltext");
 
+
+    // anonymous code 
     app.get("/alltext", async (req, res) => {
       const result = await textCollection.find({}).toArray();
       if (result.length >14) {
